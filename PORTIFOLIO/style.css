@@ -1,0 +1,21 @@
+*{
+    margin: 0; /* Reset de margin e padding para que o design nao fique louco ao mudar de navegador por exemplo*/ 
+    padding: 0;
+}
+
+body {
+    height: 100vh; /* Preenchimento da pagina para evitar que o conteudo nao ocupe o espaço desejado*/ 
+    box-sizing: border-box; /*evita que ele ultrapasse esse espaço*/
+    background-color: #E9D43A; /* define cor de fundo */ 
+    color: #077303(12, 12, 12);  /* define cor das letras*/ 
+} 
+
+
+.titulo-destaque{
+    color: #077303;  /*Cor do texto*/ 
+}
+
+.apresentacao{
+    display: flex; /*Começando o posicionamento dos elementos na pagina , aqui por padrão se so tiver o flez ele vai jgar tudo na mesma linha */ 
+    align-items: center;
+}
