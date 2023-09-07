@@ -8,14 +8,83 @@ body {
     box-sizing: border-box; /*evita que ele ultrapasse esse espaço*/
     background-color: #E9D43A; /* define cor de fundo */ 
     color: #077303(12, 12, 12);  /* define cor das letras*/ 
+    
 } 
 
 
 .titulo-destaque{
     color: #077303;  /*Cor do texto*/ 
+    font-family: 'Krona One', sans-serif;
 }
 
 .apresentacao{
+    margin: 10% 15%; /* foque central e vertical da pagina em relação ao elementos */
     display: flex; /*Começando o posicionamento dos elementos na pagina , aqui por padrão se so tiver o flez ele vai jgar tudo na mesma linha */ 
-    align-items: center;
+    align-items: center; /* centraliza os elementos no centro para que ele não fique tão esticado, ele alinha os itens com base no elemento de maior altura */
+    justify-content: space-between; /* enquanto houver espaço ele vai separar os dois agrupamentos e colocar um espáço entre eles */
 }
+
+.apresentacao__conteudo{
+    width: 615px;
+    display: flex;
+    flex-direction: column; /* pondo o afastamento dos elementos*/
+     gap: 40px;                       /* agora o espacamento de texto*/
+}
+
+.apresentacao__conteudo__titulo{
+    color: #2B7A0F;
+    font-family: Krona One;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 56px; /* 155.556% */
+}
+
+.apresentacao__conteudo__texto{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px; /* 150% */
+
+    
+}
+
+.apresentacao__botoes{ /*dando distancia entre os botões e os centralizando na tela*/
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+/* estilizando os botões*/
+
+.apresentacao__botoes__botao{ 
+    margin-right: 40px;
+    color: #FFFAFA;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 150% */
+    background-color: #2B7A0F;
+    width: 250px;
+    border-radius: 16px;
+    padding: 16px 0; /*padding horizontal e vertical o primeiro sempre e vertical e o segundo horizontal*/
+    text-decoration: none; /* tirar as çinhas sublinhadas do titulo */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column; /* Define a direção como coluna para empilhar as imagens verticalmente */
+  }
+  
+  img {
+    max-width: 100%; /* Define uma largura máxima para as imagens para que elas não estiquem além de seu tamanho natural */
+    margin-bottom: 10px; /* Adiciona espaço entre as imagens (ajuste conforme necessário) */
+  }
+  
+
