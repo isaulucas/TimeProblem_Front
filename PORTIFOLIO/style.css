@@ -33,7 +33,7 @@ body {
 
 .apresentacao__conteudo__titulo{
     color: #2B7A0F;
-    font-family: Krona One;
+    font-family: 'Krona One' , sans-serif;
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
@@ -52,15 +52,30 @@ body {
 }
 
 .apresentacao__botoes{ /*dando distancia entre os botões e os centralizando na tela*/
-    display: flex;
+    display: flex; 
+    flex-direction: column; /*coloca os botões e o texto um abaixo do outro*/
+    align-items: center; /*centraliza os botões*/
     justify-content: space-between;
+    gap: 32px;
 
+} 
+
+
+.apresentacao_botoes__subtitulo{
+    font-family: 'Krona One' , sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #077303;
+    
 
 }
+
+
 
 /* estilizando os botões*/
 
 .apresentacao__botoes__botao{ 
+    border: 2px solid #ffffff ; /* adiciona a borda em volta dos botões*/
     margin-right: 40px;
     color: #FFFAFA;
     text-align: center;
@@ -69,11 +84,10 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: 36px; /* 150% */
-    background-color: #2B7A0F;
-    width: 250px;
-    border-radius: 16px;
+    width: 378px;
+    border-radius: 8px;
     padding: 16px 0; /*padding horizontal e vertical o primeiro sempre e vertical e o segundo horizontal*/
-    text-decoration: none; /* tirar as çinhas sublinhadas do titulo */
+    text-decoration: none; /* tirar as inhas sublinhadas do titulo */
 }
 
 
