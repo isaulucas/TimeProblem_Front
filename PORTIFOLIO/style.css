@@ -4,7 +4,7 @@
 }
 
 body {
-    height: 100vh; /* Preenchimento da pagina para evitar que o conteudo nao ocupe o espaço desejado*/ 
+    /* height: 100vh;  Preenchimento da pagina para evitar que o conteudo nao ocupe o espaço desejado*/ 
     box-sizing: border-box; /*evita que ele ultrapasse esse espaço*/
     background-color: #E9D43A; /* define cor de fundo */ 
     color: #077303(12, 12, 12);  /* define cor das letras*/ 
@@ -18,7 +18,7 @@ body {
 }
 
 .apresentacao{
-    margin: 10% 15%; /* foque central e vertical da pagina em relação ao elementos */
+    padding: 8% 15%; /* foque central e vertical da pagina em relação ao elementos */
     display: flex; /*Começando o posicionamento dos elementos na pagina , aqui por padrão se so tiver o flez ele vai jgar tudo na mesma linha */ 
     align-items: center; /* centraliza os elementos no centro para que ele não fique tão esticado, ele alinha os itens com base no elemento de maior altura */
     justify-content: space-between; /* enquanto houver espaço ele vai separar os dois agrupamentos e colocar um espáço entre eles */
@@ -88,8 +88,12 @@ body {
     border-radius: 8px;
     padding: 16px 0; /*padding horizontal e vertical o primeiro sempre e vertical e o segundo horizontal*/
     text-decoration: none; /* tirar as inhas sublinhadas do titulo */
+
 }
 
+.apresentacao__botoes__botao:hover{ /*estilização de quando o mouse passa por cima do botão*/
+    background-color: #077303 ;
+}
 
 .container {
     display: flex;
@@ -102,3 +106,11 @@ body {
   }
   
 
+.rodape{
+    padding: 24px;
+    color: #fcfcfc;
+    background-color: #077303;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
