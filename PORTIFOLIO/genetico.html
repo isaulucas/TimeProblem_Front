@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o Genetico</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="cabecalho"> <!-- cabeçalho da pagina-->
+        <nav class="cabecalho__menu"> <!-- link pra navegar entre as paginas -->
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="grasp.html">Sobre o GRASP</a>
+            <a class="cabecalho__menu__link" href="genetico.html">Sobre o Genético</a>
+        </nav> 
+    </header> 
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+            <h1 class="apresentacao__conteudo__titulo">Sobre o Genetico</h1> 
+            <p class="apresentacao__conteudo__texto">  <!-- usando p*2 vc consegue fazer dois paragrafos d euma vez !-->
+                Os algoritmos genéticos são uma técnica de otimização inspirada na teoria da evolução de Charles Darwin. Eles são usados para encontrar soluções aproximadas 
+                para problemas de otimização e busca, especialmente em situações onde a busca do espaço de solução é vasta, complexa e mal definida. 
+                A geração de horários é um exemplo perfeito de tal problema.
+            </p>
+            <p class="apresentacao__conteudo__texto">
+                Na geração de horários, o objetivo é alocar recursos a tarefas ao longo do tempo, de acordo com um conjunto de restrições.
+                Os algoritmos genéticos abordam este problema criando uma população inicial de soluções possíveis (horários), cada uma representada como um cromossomo. 
+                Em cada geração, os cromossomos são avaliados usando uma função de aptidão, e os melhores são selecionados para produzir a próxima geração através de operações de cruzamento 
+                (recombinação) e mutação. Este processo é repetido até que uma solução satisfatória seja encontrada ou um número máximo de gerações seja atingido. 
+            </p>
+        </section>
+        <div class="container_gep">
+            <img src="genetico.png" alt="Foto de esquema do Genetico aplicado a geração de horario">
+            <div>
+        </main>
+        <footer class="rodape"> <!-- Rodapé -->
+            <p> Desenvolvido por DI - Departamento de Infomática </p>
+        </footer> 
+    </body>
+    </html>

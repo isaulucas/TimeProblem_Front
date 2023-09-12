@@ -1,0 +1,170 @@
+*{
+    margin: 0; /* Reset de margin e padding para que o design nao fique louco ao mudar de navegador por exemplo*/ 
+    padding: 0;
+}
+
+body {
+    /* height: 100vh;  Preenchimento da pagina para evitar que o conteudo nao ocupe o espaço desejado*/ 
+    box-sizing: border-box; /*evita que ele ultrapasse esse espaço*/
+    background-color: #E9D43A; /* define cor de fundo */ 
+    color: #077303(12, 12, 12);  /* define cor das letras*/ 
+    
+} 
+
+.cabecalho{ 
+    padding: 2% 0% 0% 15%; /*na ordem são o superior, direito, inferior e esquerdo o ajuste de padding na pagina */
+    
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+    
+}
+
+.cabecalho__menu__link{
+    font-family: 'Montserrat', sans-serif;
+    font-size:24px;
+    font-weight: 600;
+    color:#fcfcfc;
+    text-decoration: none;
+}
+
+.apresentacao{
+    padding: 7% 15%; /* foque central e vertical da pagina em relação ao elementos */
+    display: flex; /*Começando o posicionamento dos elementos na pagina , aqui por padrão se so tiver o flez ele vai jgar tudo na mesma linha */ 
+    align-items: center; /* centraliza os elementos no centro para que ele não fique tão esticado, ele alinha os itens com base no elemento de maior altura */
+    justify-content: space-between; /* enquanto houver espaço ele vai separar os dois agrupamentos e colocar um espáço entre eles */
+}
+
+.apresentacao__conteudo{
+    width: 615px;
+    display: flex;
+    flex-direction: column; /* pondo o afastamento dos elementos*/
+     gap: 40px;                       /* agora o espacamento de texto*/
+}
+
+.apresentacao__conteudo__titulo{
+    color: #2B7A0F;
+    font-family: 'Krona One' , sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 56px; /* 155.556% */
+}
+
+
+.titulo-destaque{
+    color: #077303;  /*Cor do texto*/ 
+    font-family: 'Krona One', sans-serif;
+}
+
+
+.apresentacao__conteudo__texto{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px; /* 150% */
+    text-align: justify;
+    
+}
+
+.apresentacao__botoes{ /*dando distancia entre os botões e os centralizando na tela*/
+    display: flex; 
+    flex-direction: column; /*coloca os botões e o texto um abaixo do outro*/
+    align-items: center; /*centraliza os botões*/
+    justify-content: space-between;
+    gap: 32px;
+
+} 
+
+
+.apresentacao_botoes__subtitulo{
+    font-family: 'Krona One' , sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #077303;
+    
+
+}
+
+
+
+/* estilizando os botões*/
+
+.apresentacao__botoes__botao{ 
+    border: 2px solid #ffffff ; /* adiciona a borda em volta dos botões*/
+    margin-right: 40px;
+    color: #FFFAFA;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 150% */
+    width: 378px;
+    border-radius: 8px;
+    padding: 16px 0; /*padding horizontal e vertical o primeiro sempre e vertical e o segundo horizontal*/
+    text-decoration: none; /* tirar as inhas sublinhadas do titulo */
+
+}
+
+.apresentacao__botoes__botao:hover{ /*estilização de quando o mouse passa por cima do botão*/
+    background-color: #077303 ;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Define a direção como coluna para empilhar as imagens verticalmente */
+  }
+  
+  img {
+    max-width: 100%; /* Define uma largura máxima para as imagens para que elas não estiquem além de seu tamanho natural */
+    margin-bottom: 10px; /* Adiciona espaço entre as imagens (ajuste conforme necessário) */
+  }
+  
+
+
+.rodape{
+    padding: 24px;
+    color: #fcfcfc;
+    background-color: #077303;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+
+
+
+
+
+
+/* Paginas GRASP e Genetico */
+
+.apresentacao__conteudo__textogep{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px; /* 150% */
+    text-align: justify;
+
+
+    
+}
+
+
+.container_gep{
+    display: flex;
+    align-items: flex-start; /* Alinhar verticalmente ao centro */
+}
+
+img {
+  max-width: 100%; /* A imagem não excederá o tamanho do container */
+  height: auto; /* A altura da imagem será ajustada automaticamente para manter a proporção */
+  
+}
+
