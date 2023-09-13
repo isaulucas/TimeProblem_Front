@@ -1,13 +1,26 @@
+:root { /* cores e fontes */ 
+    --cor-primaria: #E9D43A;
+    --cor-secundaria: #ffffff;
+    --cor-terciaria: #077303;
+    --cor-quaternaria: #000;
+
+
+    --fonte-primaria:'Krona One' , sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+
 *{
     margin: 0; /* Reset de margin e padding para que o design nao fique louco ao mudar de navegador por exemplo*/ 
     padding: 0;
 }
 
+
 body {
     /* height: 100vh;  Preenchimento da pagina para evitar que o conteudo nao ocupe o espaço desejado*/ 
     box-sizing: border-box; /*evita que ele ultrapasse esse espaço*/
-    background-color: #E9D43A; /* define cor de fundo */ 
-    color: #077303(12, 12, 12);  /* define cor das letras*/ 
+    background-color: var(--cor-primaria); /* define cor de fundo */ 
+    color: var(--cor-terciaria);  /* define cor das letras*/ 
     
 } 
 
@@ -23,10 +36,10 @@ body {
 }
 
 .cabecalho__menu__link{
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--fonte-secundaria);
     font-size:24px;
     font-weight: 600;
-    color:#fcfcfc;
+    color:var(--cor-secundaria);
     text-decoration: none;
 }
 
@@ -45,8 +58,8 @@ body {
 }
 
 .apresentacao__conteudo__titulo{
-    color: #2B7A0F;
-    font-family: 'Krona One' , sans-serif;
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-primaria);
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
@@ -55,14 +68,14 @@ body {
 
 
 .titulo-destaque{
-    color: #077303;  /*Cor do texto*/ 
-    font-family: 'Krona One', sans-serif;
+    color: var(--cor-terciaria);  /*Cor do texto*/ 
+    font-family: var(--fonte-primaria);
 }
 
 
 .apresentacao__conteudo__texto{
-    color: #000;
-    font-family: 'Montserrat', sans-serif;
+    color: var(--cor-quaternaria);
+    font-family: var(--fonte-secundaria);
     font-size: 25px;
     font-style: normal;
     font-weight: 400;
@@ -82,10 +95,10 @@ body {
 
 
 .apresentacao_botoes__subtitulo{
-    font-family: 'Krona One' , sans-serif;
+    font-family: var(--fonte-primaria);
     font-weight: 400;
     font-size: 24px;
-    color: #077303;
+    color: var(--cor-terciaria);
     
 
 }
@@ -95,9 +108,9 @@ body {
 /* estilizando os botões*/
 
 .apresentacao__botoes__botao{ 
-    border: 2px solid #ffffff ; /* adiciona a borda em volta dos botões*/
+    border: 2px solid var(--cor-secundaria); /* adiciona a borda em volta dos botões*/
     margin-right: 40px;
-    color: #FFFAFA;
+    color: var(--cor-secundaria);
     text-align: center;
     font-family: Montserrat;
     font-size: 24px;
@@ -112,7 +125,7 @@ body {
 }
 
 .apresentacao__botoes__botao:hover{ /*estilização de quando o mouse passa por cima do botão*/
-    background-color: #077303 ;
+    background-color: var(--cor-terciaria);
 }
 
 .container {
@@ -129,10 +142,10 @@ body {
 
 .rodape{
     padding: 24px;
-    color: #fcfcfc;
-    background-color: #077303;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--fonte-secundaria);
     font-size: 24px;
 }
 
@@ -142,19 +155,6 @@ body {
 
 
 /* Paginas GRASP e Genetico */
-
-.apresentacao__conteudo__textogep{
-    color: #000;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 27px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 36px; /* 150% */
-    text-align: justify;
-
-
-    
-}
 
 
 .container_gep{
