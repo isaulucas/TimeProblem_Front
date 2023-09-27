@@ -26,18 +26,19 @@ body {
 
 .cabecalho{ 
     padding: 2% 0% 0% 15%; /*na ordem são o superior, direito, inferior e esquerdo o ajuste de padding na pagina */
+
     
 }
 
 .cabecalho__menu{
     display: flex;
-    gap: 80px;
+    gap: 50px;
     
 }
 
 .cabecalho__menu__link{
     font-family: var(--fonte-secundaria);
-    font-size:24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color:var(--cor-secundaria);
     text-decoration: none;
@@ -48,10 +49,11 @@ body {
     display: flex; /*Começando o posicionamento dos elementos na pagina , aqui por padrão se so tiver o flez ele vai jgar tudo na mesma linha */ 
     align-items: center; /* centraliza os elementos no centro para que ele não fique tão esticado, ele alinha os itens com base no elemento de maior altura */
     justify-content: space-between; /* enquanto houver espaço ele vai separar os dois agrupamentos e colocar um espáço entre eles */
+    gap: 82px;  /* espaço de ambos imagen/texto */
 }
 
 .apresentacao__conteudo{
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column; /* pondo o afastamento dos elementos*/
      gap: 40px;                       /* agora o espacamento de texto*/
@@ -60,7 +62,7 @@ body {
 .apresentacao__conteudo__titulo{
     color: var(--cor-terciaria);
     font-family: var(--fonte-primaria);
-    font-size: 36px;
+    font-size: 2.25rem;  /* O rem e ussado pra deixar as fontes mais manipulaveis no navegador ao inverde por exemplo 40px*/
     font-style: normal;
     font-weight: 400;
     line-height: 56px; /* 155.556% */
@@ -76,11 +78,11 @@ body {
 .apresentacao__conteudo__texto{
     color: var(--cor-quaternaria);
     font-family: var(--fonte-secundaria);
-    font-size: 25px;
+    font-size: 1.75rem;
     font-style: normal;
     font-weight: 400;
     line-height: 36px; /* 150% */
-    text-align: justify;
+    text-align: justify; 
     
 }
 
@@ -97,13 +99,11 @@ body {
 .apresentacao_botoes__subtitulo{
     font-family: var(--fonte-primaria);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--cor-terciaria);
     
 
 }
-
-
 
 /* estilizando os botões*/
 
@@ -113,14 +113,14 @@ body {
     color: var(--cor-secundaria);
     text-align: center;
     font-family: Montserrat;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 600;
     line-height: 36px; /* 150% */
-    width: 378px;
+    width: 50%; /*ajusta o botão em relação ao elemento pai */
     border-radius: 8px;
     padding: 16px 0; /*padding horizontal e vertical o primeiro sempre e vertical e o segundo horizontal*/
-    text-decoration: none; /* tirar as inhas sublinhadas do titulo */
+    text-decoration: none; /* tirar as linhas sublinhadas do titulo */
 
 }
 
@@ -135,9 +135,13 @@ body {
   
   img {
     max-width: 100%; /* Define uma largura máxima para as imagens para que elas não estiquem além de seu tamanho natural */
-    margin-bottom: 10px; /* Adiciona espaço entre as imagens (ajuste conforme necessário) */
+    margin-bottom: 0.625rem; /* Adiciona espaço entre as imagens (ajuste conforme necessário) */
   }
   
+
+.apresentacao__imagem {
+    width: 50%;
+}
 
 
 .rodape{
@@ -146,16 +150,11 @@ body {
     background-color: var(--cor-terciaria);
     text-align: center;
     font-family: var(--fonte-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 
-
-
-
-
 /* Paginas GRASP e Genetico */
-
 
 .container_gep{
     display: flex;
@@ -163,8 +162,87 @@ body {
 }
 
 img {
-  max-width: 100%; /* A imagem não excederá o tamanho do container */
   height: auto; /* A altura da imagem será ajustada automaticamente para manter a proporção */
-  
+  max-width: 100%; /* A imagem não excederá o tamanho do container */
 }
 
+
+
+/* RESPONSIVIDADE */
+
+
+@media (min-width: 1201px) {
+    .container {
+        flex-direction: column; /* Altere a direção para empilhar as imagens verticalmente em telas maiores */
+        align-items: center; /* Centralize as imagens verticalmente */
+    }
+
+    .apresentacao__imagem {
+        width: auto; /* Permita que as imagens mantenham seu tamanho original */
+        max-width: 100%; /* Defina uma largura máxima para que as imagens não se estiquem demais */
+        height: auto; /* Mantenha a proporção da imagem */
+    }
+}
+
+@media (max-width: 1200px) { /* Ate esse tamanho usa um estilo de formatação se passar disso utilizará outra formatação de tamanho*/
+    .cabecalho{
+        padding: 10% ;
+    }
+   
+    .cabecalho__menu{
+        justify-content: center;
+    }
+   
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo{
+        width: auto; 
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Empilhe as imagens verticalmente */
+        align-items: center; /* Centralize as imagens horizontalmente */
+    }
+
+    .apresentacao__imagem {
+        width: 70%; /* Aumente a largura das imagens conforme desejado */
+        max-width: none; /* Remova a largura máxima */
+        height: auto; /* Mantenha a proporção da imagem */
+        margin: 0 auto; /* Centralize as imagens horizontalmente */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .cabecalho__menu__link {
+        font-size: 1rem; /* Reduza o tamanho do texto do menu */
+    }
+
+    .cabecalho__menu {
+        gap: 20px; /* Aumente o espaço entre os links do menu */
+        }
+      
+     .cabecalho__menu {
+         justify-content: center; /* Centralize os links do menu horizontalmente */
+     }
+     .apresentacao__conteudo__titulo {
+        font-size: 1.5rem; /* Reduza o tamanho do título */
+        line-height: 1.2; /* Ajuste a altura da linha para melhor legibilidade */
+    }
+
+    .apresentacao__conteudo__texto {
+        font-size: 1rem; /* Reduza o tamanho do texto */
+        line-height: 1.4; /* Ajuste a altura da linha para melhor legibilidade */
+    }
+
+    .apresentacao__botoes__botao {
+        font-size: 1rem; /* Reduza o tamanho dos botões */
+        padding: 12px 0; /* Ajuste o espaçamento interno dos botões */
+    }
+}
+        
+    
+    
