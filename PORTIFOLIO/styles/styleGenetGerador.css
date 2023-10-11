@@ -1,8 +1,8 @@
 :root { /* cores e fontes */ 
-    --cor-primaria: #E9B44C;
-    --cor-secundaria: #ffffff;
-    --cor-terciaria: #077303;
-    --cor-quaternaria: #000;
+    --cor-primaria: #051D40;
+    --cor-secundaria: #fff;
+    --cor-terciaria: #E9B44C;
+    --cor-quaternaria: #fff;
 
 
     --fonte-primaria:'Krona One' , sans-serif;
@@ -251,4 +251,6 @@ img {
 }
         
     
+    
+
     
