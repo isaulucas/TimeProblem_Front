@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o Genético</title>
+    <link rel="stylesheet" href="./styles/styleajuda.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="grasp.html">Sobre o GRASP</a>
+            <a class="cabecalho__menu__link" href="genetico.html">Sobre o Genético</a>
+            <a class="cabecalho__menu__link" href="genetico.html">Como Utilizar</a>
+        </nav>
+    </header>
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+            <h1 class="apresentacao__conteudo__titulo">Como Utilizar</h1>
+            <div class="apresentacao__conteudo__texto">
+                <p>Quando se trata de "upar" uma planilha, geralmente estamos nos referindo ao processo de fazer o upload ou carregamento de uma planilha de dados para uma plataforma ou sistema, como uma planilha eletrônica em um software de planilhas online ou um sistema de gerenciamento de dados. Esse procedimento é fundamental para organizar, compartilhar e analisar informações de forma mais eficiente, permitindo que equipes colaborem e tomem decisões com base em dados atualizados.</p>
+                <p>Parágrafo 2: Conteúdo do parágrafo 2.</p>
+                <p>Parágrafo 3: Conteúdo do parágrafo 3.</p>
+                <p>Parágrafo 4: Conteúdo do parágrafo 4.</p>
+                <p>Parágrafo 5: Conteúdo do parágrafo 5.</p>
+            </div>
+            <div class="apresentacao__botoes">
+                <button class="apresentacao__botoes__botao anterior"> ← Anterior</button>
+                <button class="apresentacao__botoes__botao proxima">Próxima →</button>
+            </div>
+        </section>
+        <div class="container_gep">
+            <img class="apresentacao__imagem" src="ajuda.jpg" alt="Foto de esquema do Genético aplicado à geração de horários">
+        </div>
+    </main>
+    <footer class="rodape">
+        <p>Desenvolvido pelo DI - Departamento de Informática</p>
+    </footer>
+    <script>
+        const botoes = document.querySelectorAll('.apresentacao__botoes__botao');
+        const paragrafos = document.querySelectorAll('.apresentacao__conteudo__texto p');
+        let index = 0;
+
+        function mostrarParagrafo(index) {
+            paragrafos.forEach(paragrafo => {
+                paragrafo.style.display = 'none';
+            });
+            paragrafos[index].style.display = 'block';
+        }
+
+        function proximoParagrafo() {
+            if (index < paragrafos.length - 1) {
+                index++;
+                mostrarParagrafo(index);
+            }
+        }
+
+        function paragrafoAnterior() {
+            if (index > 0) {
+                index--;
+                mostrarParagrafo(index);
+            }
+        }
+
+        botoes.forEach(botao => {
+            if (botao.classList.contains('anterior')) {
+                botao.addEventListener('click', paragrafoAnterior);
+            } else if (botao.classList.contains('proxima')) {
+                botao.addEventListener('click', proximoParagrafo);
+            }
+        });
+
+        mostrarParagrafo(index);
+    </script>
+</body>
+</html>
